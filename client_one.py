@@ -9,6 +9,3 @@ p2 = Thread(target=client1.send_message, args=('localhost', 50003))
 
 p1.start()
 p2.start()
-
-p1.join()
-p2.join()
