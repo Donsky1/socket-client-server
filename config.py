@@ -1,3 +1,3 @@
-HOST = 'localhost'
+HOST = ''
 PORT = 50004
-BUFFER = 4096
+BUFFER = 1024
