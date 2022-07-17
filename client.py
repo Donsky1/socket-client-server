@@ -10,10 +10,12 @@ class Client:
         self.port = port
 
     @staticmethod
-    def send_message(message, host, port):
-        with socket.socket() as s:
-            s.connect((host, port))
-            s.send(bytes(message, 'utf-8'))
+    def send_message(host, port):
+        while True:
+            message = input('Сообщение для отправки: ')
+            with socket.socket() as s:
+                s.connect((host, port))
+                s.send(bytes(message, 'utf-8'))
 
     def get_message(self):
         with socket.socket() as s:
